@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nascionalidade</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Digite sua Nascionalidade:<input type="text" name="nasc" id="nasc">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+          var nasci = document.querySelector('input#nasc')
+          var res = document.querySelector('div#res')
+          pais = String(nasci.value)
+          res.innerHTML = `Você é nascional do país ${pais}`
+
+          if (pais == 'Brasil') {
+            res.innerHTML = `Você é brasileiro`
+          } else {
+            res.innerHTML = `Você é estrangeiro`
+          }
+        }
+    </script>
+</body>
+</html
